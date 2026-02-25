@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
+    <title>Gerencidor de tarefas</title>
+</head>
+
+<body>
+    <div id="geral">
+        <h2>GERENCIADOR DE TAREFAS</h2>
+
+        <div id="divform">
+            <form id="Tarefas">
+                <input type="text" name="tarefa" id="tarefa" class="inputTxt" required placeholder="Tarefa">
+
+                <input type="text" name="responsavel" id="responsavel" class="inputTxt" required
+                    placeholder="Responsável">
+
+                <textarea name="descricao" id="descricao" class="inputTxt" required placeholder="Descrição"></textarea>
+
+                <div id="divRadios">
+                    <label for="Prioridade">Prioridade</label>
+                    <input type="radio" name="Prioridade" id="baixa" class="inputRadio" value="baixa">baixa
+                    <input type="radio" name="Prioridade" id="media" class="inputRadio" value="media">media
+                    <input type="radio" name="Prioridade" id="alta" class="inputRadio" value="alta">alta
+                </div>
+                <button type="submit" id="btnAdicionar">Adicionar Tarefa</button>
+            </form>
+        </div>
+        <div id="divListaTarefa">
+            <div class="tarefa baixa">
+                <h2 class="titulo">Limpar o quarto</h2>
+                <h3 class="tituloResponsavel">Responsável: Astrogildo</h3>
+                <p class="descTarefa">
+                    Limpar o quarto certinho
+                </p>
+                <h3 class="tipoPrioridade">baixa</h3>
+            </div>
+
+            <div class="tarefa media">
+                <h2 class="titulo">Limpar o quarto</h2>
+                <h3 class="tituloResponsavel">Responsável: Astrogildo</h3>
+                <p class="descTarefa">
+                    Limpar o quarto certinho
+                </p>
+                <h3 class="tipoPrioridade">Media</h3>
+            </div>
+            <div class="tarefa alta">
+                <h2 class="titulo">Limpar o quarto</h2>
+                <h3 class="tituloResponsavel">Responsável: Astrogildo</h3>
+                <p class="descTarefa">
+                    Limpar o quarto certinho
+                </p>
+                <h3 class="tipoPrioridade">Alta</h3>
+            </div>
+
+        </div>
+    </div>
+    
+</body>
+
+</html>

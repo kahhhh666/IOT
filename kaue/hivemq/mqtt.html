@@ -1,0 +1,94 @@
+
+<!--https://www.hivemq.com/demos/websocket-client/-->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>MQTT HiveMQ Cloud Demo</title>
+  <script src="https://unpkg.com/mqtt/dist/mqtt.min.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    input, button {
+      font-size: 1em;
+      padding: 8px;
+      margin: 5px 0;
+    }
+    #messages {
+      margin-top: 20px;
+      border: 1px solid #ddd;
+      padding: 10px;
+      height: 200px;
+      overflow-y: auto;
+      background: #f9f9f9;
+    }
+  </style>
+</head>
+<body>
+  <h2>Comunicação MQTT com HiveMQ Cloud</h2>
+
+  <input type="text" id="messageInput" placeholder="Digite a mensagem" />
+  <button id="sendBtn">Enviar</button>
+
+  <h3>Mensagens Recebidas</h3>
+  <div id="messages"></div>
+
+  <script>
+    // === CONFIGURAÇÃO DO SEU CLUSTER HiveMQ Cloud ===
+    const host = "db234728b8ac4801b67f965f587be3b7.s1.eu.hivemq.cloud"; // seu host exato
+    const port = 8884; // WebSocket seguro
+    const username = "khlsantos"; // substitua pelo seu usuário
+    const password = "Kh242009";   // substitua pela sua senha
+    const topic = "testtopic/1";   // tópico para publicar e assinar
+
+    // URL completa do broker via WebSocket seguro
+    const brokerUrl = `wss://${host}:${port}/mqtt`;
+
+    // Cria cliente MQTT usando MQTT.js
+    const client = mqtt.connect(brokerUrl, {
+      username: username,
+      password: password,
+      reconnectPeriod: 1000,  // tenta reconectar a cada 1s se cair
+      connectTimeout: 4000    // tempo limite conexão
+    });
+
+    client.on("connect", () => {
+      console.log("Conectado ao HiveMQ Cloud!");
+      client.subscribe(topic, (err) => {
+        if (err) {
+          console.error("Erro ao assinar tópico:", err);
+        } else {
+          console.log(`Assinado no tópico '${topic}'`);
+        }
+      });
+    });
+
+    client.on("error", (error) => {
+      console.error("Erro MQTT:", error);
+    });
+
+    client.on("message", (receivedTopic, message) => {
+      if (receivedTopic === topic) {
+        const msg = message.toString();
+        const messagesDiv = document.getElementById("messages");
+        const p = document.createElement("p");
+        p.textContent = msg;
+        messagesDiv.appendChild(p);
+        messagesDiv.scrollTop = messagesDiv.scrollHeight;
+      }
+    });
+
+    // Envia mensagem ao clicar no botão
+    document.getElementById("sendBtn").addEventListener("click", () => {
+      const input = document.getElementById("messageInput");
+      const msg = input.value.trim();
+      if (msg) {
+        client.publish(topic, msg);
+        input.value = "";
+      }
+    });
+  </script>
+</body>
+</html>

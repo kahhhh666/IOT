@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> GERENCIADOR DE TAREFAS</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="js/scripts.js" defer></script>
+
+</head>
+
+<body>
+    <div id="geral">
+        <h2>GERENCIADOR DE TAREFAS</h2>
+
+        <div id="dadosTarefas">
+
+            <div id="divForm">
+                <form id="formTarefas">
+                    <input type="text" name="tarefa" id="tarefa" class="inputTxt" required placeholder="Tarefa">
+
+                    <input type="text" name="reponsavel" id="reponsavel" class="inputTxt" required
+                        placeholder="Responsável">
+
+                    <textarea name="descricao" id="descricao" class="inputTxt" required
+                        placeholder="Descrição"></textarea>
+
+                    <div id="divRadios">
+                        <label for="prioridade"> Prioridade </label>
+                        <input type="radio" name="prioridade" id="baixa" class="inputRadio" value="baixa" required>
+                        Baixa
+                        <input type="radio" name="prioridade" id="media" class="inputRadio" value="media" required>
+                        Média
+                        <input type="radio" name="prioridade" id="alta" class="inputRadio" value="alta" required> Alta
+
+                        <label for="data_tarefa">Data Tarefa</label>
+                        <input type="date" name="data_tarefa" id="data_tarefa" class="inputTxt" required
+                            placeholder="Data">
+                    </div>
+
+                    <button type="submit" id="btnAdicionar"> Adicionar Tarefa </button>
+                </form>
+            </div>
+
+            <div id="numerosTarefas">
+                <div id="totaisMovimentação">
+                    <div class="totalNumeros" id="totalAberto">
+                        Aberto 0
+                    </div>
+                    <div class="totalNumeros" id="totalEmAndamento">
+                        Em Andamento 0
+                    </div>
+                    <div class="totalNumeros" id="totalFinalizado">
+                        Finalizada 0
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div id="totais">
+            <div class="totalCaixa" id="totalBaixa">
+                BAIXA 0
+            </div>
+            <div class="totalCaixa" id="totalMedia">
+                MÉDIA 0
+            </div>
+            <div class="totalCaixa" id="totalAlta">
+                ALTA 0
+            </div>
+        </div>
+
+        <div id="cabecalhoColunas">
+            <div id="aberto">
+                <h3 class="titoMovimentacao">Aberto</h3>
+            </div>
+
+            <div id="emAndamento">
+                <h3 class="titoMovimentacao">Em Andamento</h3>
+            </div>
+            <div id="finalizada">
+                <h3 class="titoMovimentacao">Finalizada</h3>
+            </div>
+        </div>
+
+        <div id="divListaTarefas">
+
+            <div class="coluna" id="colunaAberto">
+                <div class="tarefa baixa">
+                    <h2 class="titulo">Limpar o Quarto</h2>
+                    <h3 class="tituloResponsavel">Responsável: Astrogildo</h3>
+                    <p class="descTarefa">
+                        Limpar o quarto certinho
+                    </p>
+                    <h3 class="dataTarefa infoBaixa"> Data Tarefa 11/02/2026 </h3>
+                    <h3 class="tipoPrioridade infoBaixa">Baixa</h3>
+
+                    <div class="btns">
+                        <button class="btnMovimentacao btnEmAndamento"> Em Andamento</button>
+                        <button class="btnMovimentacao btnFinalizar"> Finalizar </button>
+                    </div>
+                </div>
+
+                <div class="tarefa media">
+                    <h2 class="titulo">Limpar o Quarto</h2>
+                    <h3 class="tituloResponsavel">Responsável: Astrogildo</h3>
+                    <p class="descTarefa">
+                        Limpar o quarto certinho
+                    </p>
+                    <h3 class="dataTarefa infoMedia"> Data Tarefa 11/02/2026 </h3>
+                    <h3 class="tipoPrioridade infoMedia">Média</h3>
+
+                    <div class="btns">
+                        <button class="btnMovimentacao btnEmAndamento"> Em Andamento</button>
+                        <button class="btnMovimentacao btnFinalizar"> Finalizar </button>
+                    </div>
+                </div>
+
+                <div class="tarefa alta">
+                    <h2 class="titulo">Limpar o Quarto</h2>
+                    <h3 class="tituloResponsavel">Responsável: Astrogildo</h3>
+                    <p class="descTarefa">
+                        Limpar o quarto certinho
+                    </p>
+                    <h3 class="dataTarefa infoAlta"> Data Tarefa 11/02/2026 </h3>
+                    <h3 class="tipoPrioridade infoAlta">Alta</h3>
+
+                    <div class="btns">
+                        <button class="btnMovimentacao btnEmAndamento"> Em Andamento</button>
+                        <button class="btnMovimentacao btnFinalizar"> Finalizar </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="coluna" id="colunaEmAndamento">
+
+                <div class="tarefa baixa">
+                    <h2 class="titulo">Limpar o Quarto</h2>
+                    <h3 class="tituloResponsavel">Responsável: Astrogildo</h3>
+                    <p class="descTarefa">
+                        Limpar o quarto certinho
+                    </p>
+                    <h3 class="dataTarefa infoBaixa"> Data Tarefa 11/02/2026 </h3>
+                    <h3 class="tipoPrioridade infoBaixa">Baixa</h3>
+
+                    <div class="btns">
+                        <button class="btnMovimentacao btnAbrir"> Abrir</button>
+                        <button class="btnMovimentacao btnFinalizar"> Finalizar </button>
+                    </div>
+                </div>
+
+                <div class="tarefa media">
+                    <h2 class="titulo">Limpar o Quarto</h2>
+                    <h3 class="tituloResponsavel">Responsável: Astrogildo</h3>
+                    <p class="descTarefa">
+                        Limpar o quarto certinho
+                    </p>
+                    <h3 class="dataTarefa infoMedia"> Data Tarefa 11/02/2026 </h3>
+                    <h3 class="tipoPrioridade infoMedia">Média</h3>
+
+                    <div class="btns">
+                        <button class="btnMovimentacao btnAbrir"> Abrir</button>
+                        <button class="btnMovimentacao btnFinalizar"> Finalizar </button>
+                    </div>
+                </div>
+
+                <div class="tarefa alta">
+                    <h2 class="titulo">Limpar o Quarto</h2>
+                    <h3 class="tituloResponsavel">Responsável: Astrogildo</h3>
+                    <p class="descTarefa">
+                        Limpar o quarto certinho
+                    </p>
+                    <h3 class="dataTarefa infoAlta"> Data Tarefa 11/02/2026 </h3>
+                    <h3 class="tipoPrioridade infoAlta">Alta</h3>
+
+                    <div class="btns">
+                        <button class="btnMovimentacao btnAbrir"> Abrir</button>
+                        <button class="btnMovimentacao btnFinalizar"> Finalizar </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="coluna" id="colunaFinalizada">
+                <div class="tarefa baixa">
+                    <h2 class="titulo">Limpar o Quarto</h2>
+                    <h3 class="tituloResponsavel">Responsável: Astrogildo</h3>
+                    <p class="descTarefa">
+                        Limpar o quarto certinho
+                    </p>
+                    <h3 class="dataTarefa infoBaixa"> Data Tarefa 11/02/2026 </h3>
+                    <h3 class="tipoPrioridade infoBaixa">Baixa</h3>
+
+                    <div class="btns">
+                        <button class="btnMovimentacao btnAbrir"> Abrir</button>
+                        <button class="btnMovimentacao btnAndamento"> Em Andamento </button>
+                    </div>
+                </div>
+
+                <div class="tarefa media">
+                    <h2 class="titulo">Limpar o Quarto</h2>
+                    <h3 class="tituloResponsavel">Responsável: Astrogildo</h3>
+                    <p class="descTarefa">
+                        Limpar o quarto certinho
+                    </p>
+                    <h3 class="dataTarefa infoMedia"> Data Tarefa 11/02/2026 </h3>
+                    <h3 class="tipoPrioridade infoMedia">Média</h3>
+
+                    <div class="btns">
+                        <button class="btnMovimentacao btnAbrir"> Abrir</button>
+                        <button class="btnMovimentacao btnAndamento"> Em Andamento </button>
+                    </div>
+                </div>
+
+                <div class="tarefa alta">
+                    <h2 class="titulo">Limpar o Quarto</h2>
+                    <h3 class="tituloResponsavel">Responsável: Astrogildo</h3>
+                    <p class="descTarefa">
+                        Limpar o quarto certinho
+                    </p>
+                    <h3 class="dataTarefa infoAlta"> Data Tarefa 11/02/2026 </h3>
+                    <h3 class="tipoPrioridade infoAlta">Alta</h3>
+
+                    <div class="btns">
+                        <button class="btnMovimentacao btnAbrir"> Abrir</button>
+                        <button class="btnMovimentacao btnAndamento"> Em Andamento </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

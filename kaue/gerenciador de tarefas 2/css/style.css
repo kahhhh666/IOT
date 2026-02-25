@@ -1,0 +1,173 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#cfcfcf;
+}
+
+/* CONTAINER CENTRAL */
+#geral{
+    width:1000px;
+    margin:20px auto;
+}
+
+/* TITULO */
+h2{
+    text-align:center;
+    color:#0d3b53;
+    margin:20px 0;
+    font-size:18px;
+    letter-spacing:2px;
+}
+
+/* AREA FORM */
+#divform{
+    display:flex;
+    align-items:flex-start;
+    gap:25px;
+    margin-bottom:25px;
+}
+
+/* FORM */
+form{
+    width:600px;
+    background:#123f55;
+    padding:20px;
+    border-radius:6px;
+    color:white;
+}
+
+form input[type="text"],
+form textarea,
+form input[type="date"]{
+    width:100%;
+    padding:8px;
+    margin:8px 0;
+    border:none;
+    border-radius:4px;
+}
+
+textarea{
+    height:100px;
+    resize:none;
+}
+
+#divRadios{
+    margin-top:10px;
+    font-size:14px;
+}
+
+#divRadios input{
+    margin-right:5px;
+}
+
+#btnAdicionar{
+    width:100%;
+    padding:10px;
+    margin-top:12px;
+    border:none;
+    border-radius:5px;
+    background:#e6e6e6;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+#btnAdicionar:hover{
+    background:#d4d4d4;
+}
+
+/* BOTÕES LATERAIS */
+#totaisMovimentação{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+}
+
+.totalNumeros{
+    width:150px;
+    background:#123f55;
+    color:white;
+    padding:15px;
+    border-radius:6px;
+    text-align:center;
+    font-size:13px;
+    font-weight:bold;
+}
+
+/* BARRAS COLORIDAS */
+#totais{
+    width:1000px;
+    margin:20px auto;
+    display:flex;
+    justify-content:space-between;
+}
+
+.totalCaixa{
+    width:300px;
+    padding:12px;
+    border-radius:6px;
+    font-size:13px;
+    font-weight:bold;
+    color:white;
+    text-align:center;
+}
+
+#totalBaixa{
+    background:#4CAF50;
+}
+
+#totalMedia{
+    background:#FFC107;
+}
+
+#totalAlta{
+    background:#F44336;
+}
+
+/* TITULOS COLUNAS */
+#cabecalhoColunas{
+    width:1000px;
+    margin:10px auto;
+    display:flex;
+    justify-content:space-around;
+}
+
+.titoMovimentacao{
+    font-size:14px;
+    color:#0d3b53;
+}
+
+/* COLUNAS */
+.situacaoTarefa{
+    width:1000px;
+    margin:10px auto 40px auto;
+    display:flex;
+    justify-content:space-between;
+}
+
+
+
+/* CARD */
+.tarefa{
+    background:white;
+    padding:12px;
+    margin-bottom:15px;
+    border-radius:6px;
+}
+
+/* BORDA PRIORIDADE */
+.baixa{
+    border-left:6px solid #4CAF50;
+}
+
+.media{
+    border-left:6px solid #FFC107;
+}
+
+.alta{
+    border-left:6px solid #F44336;
+}

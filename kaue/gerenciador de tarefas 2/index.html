@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
+    <title>Gerenciador de tarefas</title>
+</head>
+
+<body>
+
+    <div id="geral">
+        <h2>GERENCIADOR DE TAREFAS</h2>
+
+        <div id="divform">
+            <form id="Tarefas">
+
+                <input type="text" name="tarefa" id="tarefa" required placeholder="Tarefa">
+
+                <input type="text" name="responsavel" id="responsavel" required
+                    placeholder="Responsável">
+
+                <textarea name="descricao" id="descricao" placeholder="Descrição"
+                    required></textarea>
+
+                <div id="divRadios">
+                    <label>Prioridade</label><br>
+                    <input type="radio" name="prioridade" value="baixa" required> Baixa
+                    <input type="radio" name="prioridade" value="media"> Média
+                    <input type="radio" name="prioridade" value="alta"> Alta
+                </div>
+
+                <label for="dataTarefa">Data Tarefa</label>
+                <input type="date" name="dataTarefa" id="dataTarefa" required>
+
+                <button type="submit" id="btnAdicionar">Adicionar Tarefa</button>
+
+            </form>
+
+            <div id="totaisMovimentacao">
+                <div class="totalNumeros">Aberto 0</div>
+                <div class="totalNumeros">Em Andamento 0</div>
+                <div class="totalNumeros">Finalizada 0</div>
+            </div>
+        </div>
+    </div>
+
+    <div id="totais">
+        <div class="totalCaixa" id="totalBaixa">BAIXA 0</div>
+        <div class="totalCaixa" id="totalMedia">MÉDIA 0</div>
+        <div class="totalCaixa" id="totalAlta">ALTA 0</div>
+    </div>
+
+    <div id="cabecalhoColunas">
+        <div><h3 class="titoMovimentacao">Aberto</h3></div>
+        <div><h3 class="titoMovimentacao">Em Andamento</h3></div>
+        <div><h3 class="titoMovimentacao">Finalizada</h3></div>
+    </div>
+<hr>
+    <div class="situacaoTarefa">
+        <div class="coluna" id="colunaAberto"></div>
+        <div class="coluna" id="colunaEmAndamento"></div>
+        <div class="coluna" id="colunaFinalizado"></div>
+    </div>
+
+</body>
+</html>
