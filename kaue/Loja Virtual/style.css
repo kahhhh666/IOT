@@ -1,0 +1,12 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: 'Roboto';
+}
+
+header{
+    background-color: #111827;
+    height: 130px;
+    color: #ffff;
+}
